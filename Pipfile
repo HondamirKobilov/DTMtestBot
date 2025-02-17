@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+aiogram = "2.25.2"
+environs = "*"
+asyncpg = "*"
+sqlalchemy = "*"
+aioschedule = "*"
+wand = "*"
+transliterate = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "*"

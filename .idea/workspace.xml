@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="874b2fce-d3d0-4697-9d26-e9de8524710b" name="Changes" comment="Markaz tugadi ujee" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ravshanjonuz&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ravshanjonuz/markazi.git&quot;,
+    &quot;accountId&quot;: &quot;46fb3a13-3ebb-4637-bc6f-33c425242984&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2eeYQTW5Xx3kIGAwtkWEWuV7LUz" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.combination.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/python/markazi/data&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\python\markazi\data" />
+      <recent name="D:\python\markazi\keyboards\inline" />
+      <recent name="D:\python\markazi" />
+      <recent name="D:\python\markazi\handlers\users\admin" />
+      <recent name="D:\python\markazi\utils\database\functions" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\python\markazi\handlers\users\main" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="markazi" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="combination" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="markazi" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/data" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data/combination.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="markazi" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="markazi" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads/Telegram Desktop" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/Telegram Desktop/main1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.combination" />
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.main1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.22855.92" />
+        <option value="bundled-python-sdk-b068d85d1acf-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.22855.92" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="874b2fce-d3d0-4697-9d26-e9de8524710b" name="Changes" comment="" />
+      <created>1712266494377</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712266494377</updated>
+      <workItem from="1727976725907" duration="15863000" />
+      <workItem from="1728137177903" duration="792000" />
+      <workItem from="1728205852541" duration="21037000" />
+      <workItem from="1728493820956" duration="2604000" />
+      <workItem from="1728721123798" duration="3151000" />
+      <workItem from="1728746751700" duration="19206000" />
+      <workItem from="1729083194176" duration="2830000" />
+      <workItem from="1729162033374" duration="2044000" />
+      <workItem from="1729174854506" duration="1965000" />
+      <workItem from="1729239882691" duration="21657000" />
+      <workItem from="1729708965084" duration="2605000" />
+      <workItem from="1729784919057" duration="680000" />
+      <workItem from="1729793180198" duration="14920000" />
+      <workItem from="1731048768102" duration="1868000" />
+      <workItem from="1731151926613" duration="466000" />
+      <workItem from="1731152406763" duration="7611000" />
+      <workItem from="1737097410945" duration="17434000" />
+      <workItem from="1737129031676" duration="3481000" />
+      <workItem from="1737142598331" duration="685000" />
+      <workItem from="1737198613896" duration="32414000" />
+      <workItem from="1737273860899" duration="34079000" />
+      <workItem from="1737355600890" duration="25936000" />
+      <workItem from="1737461435848" duration="1422000" />
+      <workItem from="1737798426393" duration="1830000" />
+      <workItem from="1738564161522" duration="321000" />
+      <workItem from="1738564848111" duration="13544000" />
+      <workItem from="1738674344332" duration="13926000" />
+      <workItem from="1738728334799" duration="221000" />
+      <workItem from="1738728575236" duration="32541000" />
+      <workItem from="1738823565159" duration="12244000" />
+      <workItem from="1738910379716" duration="5308000" />
+      <workItem from="1738999912381" duration="21213000" />
+      <workItem from="1739077514883" duration="20689000" />
+      <workItem from="1739165792509" duration="35518000" />
+      <workItem from="1739254884673" duration="12006000" />
+      <workItem from="1739297119593" duration="31000" />
+      <workItem from="1739348011508" duration="9328000" />
+      <workItem from="1739432168582" duration="23264000" />
+      <workItem from="1739517358166" duration="23599000" />
+      <workItem from="1739549950394" duration="10862000" />
+      <workItem from="1739605088641" duration="5460000" />
+      <workItem from="1739690396389" duration="14682000" />
+    </task>
+    <task id="LOCAL-00001" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1712617704860</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712617704860</updated>
+    </task>
+    <task id="LOCAL-00002" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1712618031270</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712618031270</updated>
+    </task>
+    <task id="LOCAL-00003" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713060379378</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713060379379</updated>
+    </task>
+    <task id="LOCAL-00004" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713060572182</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1713060572182</updated>
+    </task>
+    <task id="LOCAL-00005" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713060659174</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1713060659174</updated>
+    </task>
+    <task id="LOCAL-00006" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713060717675</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713060717675</updated>
+    </task>
+    <task id="LOCAL-00007" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713061178022</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1713061178022</updated>
+    </task>
+    <task id="LOCAL-00008" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713061267656</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1713061267656</updated>
+    </task>
+    <task id="LOCAL-00009" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713061472185</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1713061472185</updated>
+    </task>
+    <task id="LOCAL-00010" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713062075321</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1713062075321</updated>
+    </task>
+    <task id="LOCAL-00011" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713543168054</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1713543168055</updated>
+    </task>
+    <task id="LOCAL-00012" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713577307917</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713577307919</updated>
+    </task>
+    <task id="LOCAL-00013" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713578709505</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713578709505</updated>
+    </task>
+    <task id="LOCAL-00014" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713578722251</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1713578722251</updated>
+    </task>
+    <task id="LOCAL-00015" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713579114629</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1713579114629</updated>
+    </task>
+    <task id="LOCAL-00016" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713579196646</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1713579196646</updated>
+    </task>
+    <task id="LOCAL-00017" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713579215394</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1713579215394</updated>
+    </task>
+    <task id="LOCAL-00018" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713643742255</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713643742255</updated>
+    </task>
+    <task id="LOCAL-00019" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713778281245</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713778281245</updated>
+    </task>
+    <task id="LOCAL-00020" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713778429850</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1713778429850</updated>
+    </task>
+    <task id="LOCAL-00021" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1713778446469</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1713778446469</updated>
+    </task>
+    <task id="LOCAL-00022" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1729859575220</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1729859575220</updated>
+    </task>
+    <task id="LOCAL-00023" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1731154140761</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1731154140763</updated>
+    </task>
+    <task id="LOCAL-00024" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1731159601273</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1731159601273</updated>
+    </task>
+    <task id="LOCAL-00025" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1731160819548</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1731160819548</updated>
+    </task>
+    <task id="LOCAL-00026" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1731160853530</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1731160853530</updated>
+    </task>
+    <task id="LOCAL-00027" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1731160985719</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1731160985719</updated>
+    </task>
+    <task id="LOCAL-00028" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1731161054074</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1731161054074</updated>
+    </task>
+    <task id="LOCAL-00029" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1731161650291</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1731161650291</updated>
+    </task>
+    <task id="LOCAL-00030" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1731161700363</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1731161700363</updated>
+    </task>
+    <task id="LOCAL-00031" summary="MARKAZ">
+      <option name="closed" value="true" />
+      <created>1737309490976</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1737309490976</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Markaz tugadi ujee">
+      <option name="closed" value="true" />
+      <created>1737377978866</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1737377978866</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="MARKAZ" />
+    <MESSAGE value="Markaz tugadi ujee" />
+    <option name="LAST_COMMIT_MESSAGE" value="Markaz tugadi ujee" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DTMtestBot$app.coverage" NAME="app Coverage Results" MODIFIED="1739726914025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/markazi$app.coverage" NAME="app Coverage Results" MODIFIED="1737461543309" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/markazi$combination.coverage" NAME="combination Coverage Results" MODIFIED="1729627677580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/data" />
+    <SUITE FILE_PATH="coverage/markazi$main1.coverage" NAME="main1 Coverage Results" MODIFIED="1728224099135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/Telegram Desktop" />
+    <SUITE FILE_PATH="coverage/markazi$main.coverage" NAME="main Coverage Results" MODIFIED="1728297910761" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
