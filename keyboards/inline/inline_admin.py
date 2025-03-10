@@ -173,13 +173,25 @@ async def get_diagnostika_buttons():
 async def get_diagnostika_detail_buttons(diagnostika_id: int):
     diagnostika = await get_diagnostika_by_id(diagnostika_id)
     keyboard = IKM(row_width=2)
+
     if diagnostika:
+        # ✅ Statusni belgilash
+        status_emoji = "🟡 Yoqilgan" if diagnostika.status else "🔴 O‘chirilgan"
+        toggle_status_callback = f"toggle_diagnostika_status:{diagnostika.id}"
+
+        # ✅ Tugmalarni qo‘shish
         keyboard.add(
             IKB(text="✏️ Tahrirlash", callback_data=f"admin_edit_diagnostika:{diagnostika.id}"),
             IKB(text="🗑 O‘chirish", callback_data=f"confirm_delete_diagnostika:{diagnostika.id}")
         )
+        keyboard.add(
+            IKB(text=status_emoji, callback_data=toggle_status_callback)  # ✅ Status tugmasi
+        )
         keyboard.add(IKB(text="🔙 Ortga", callback_data="admin_diaginostika"))
-    return f"📌 Tanlangan diagnostika: {diagnostika.name}", keyboard
+
+        return f"📌 Tanlangan diagnostika: {diagnostika.name}", keyboard
+    else:
+        return "❌ Diagnostika topilmadi!", None
 
 async def get_confirm_delete_diaginostika_buttons(diagnostika_id: int):
     keyboard = IKM(row_width=2)
@@ -188,6 +200,7 @@ async def get_confirm_delete_diaginostika_buttons(diagnostika_id: int):
         IKB(text="❌ Yo‘q", callback_data=f"admin_diagnostika:{diagnostika_id}")
     )
     return "⚠️ Rostan ham shu diagnostikani o‘chirmoqchimisiz?", keyboard
+
 
 async def get_diagnostika_list_buttons(subject_id: int):
     subject = await get_subject_by_id(subject_id)
@@ -229,4 +242,13 @@ def get_delete_tests_confirmation_buttons(test_type: str, subject_id: int, diagn
         IKB(text="✅ Ha, o‘chirish", callback_data=f"delete_tests:{test_type}:{subject_id}:{diagnostika_id}"),
         IKB(text="❌ Yo‘q, bekor qilish", callback_data=f"cancel_delete_tests:{subject_id}:{diagnostika_id}")
     )
+    return keyboard
+
+async def generate_diagnostika_buttons(diagnostika_id: int) -> IKM:
+    keyboard = IKM(row_width=2)
+    keyboard.add(
+        IKB(text="✏️ Tahrirlash", callback_data=f"admin_edit_diagnostika:{diagnostika_id}"),
+        IKB(text="🗑 O‘chirish", callback_data=f"confirm_delete_diagnostika:{diagnostika_id}")
+    )
+    keyboard.add(IKB(text="🔙 Ortga", callback_data="admin_diaginostika"))
     return keyboard

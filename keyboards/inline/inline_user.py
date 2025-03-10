@@ -1,6 +1,5 @@
-from aiogram.types import InlineKeyboardMarkup as IKM, InlineKeyboardButton as IKB
-
-from data.config import USERNAME_START
+from aiogram.types import InlineKeyboardMarkup as IKM, InlineKeyboardButton as IKB, WebAppInfo
+from data.config import USERNAME_START, WEB_APP_URL
 from data.consts import uzbekistan_regions
 from data.texts import lang_button, button
 language_picker = IKM(
@@ -101,4 +100,9 @@ def inline_keyboard_markup():
     keyboard.add(
         IKB("Ortga 🔙", callback_data="go_back")
     )
+    return keyboard
+
+def get_interactive_menu_keyboard():
+    keyboard = IKM()
+    keyboard.add(IKB("Web app", web_app=WebAppInfo(url=f"{WEB_APP_URL}")))
     return keyboard

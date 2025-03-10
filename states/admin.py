@@ -32,6 +32,8 @@ class UploadTestState(StatesGroup):
 
 class AddDiagnostikaState(StatesGroup):
     waiting_for_name = State()
+    waiting_for_finished_at = State()
 
 class EditDiagnostikaState(StatesGroup):
     name = State()
+    waiting_for_finished_at = State()

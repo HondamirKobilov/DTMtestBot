@@ -13,7 +13,6 @@ def kb_main_menu(lang):
         one_time_keyboard=True,
         resize_keyboard=True,
         keyboard=[
-            [KeyboardButton(text=button("user_solve_online_subject", lang), web_app=WebAppInfo(url=domen))],
             reply_keyboards(lang, "user_settings")
         ]
     )

@@ -1,6 +1,7 @@
 from asyncpg import DuplicateDatabaseError, connect
 from sqlalchemy import Column, String, Boolean, DateTime, BigInteger, VARCHAR, Integer, Table
 from sqlalchemy import ForeignKey
+from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
@@ -35,7 +36,6 @@ diagnostika_subject_association = Table(
     Column("subject_id", BigInteger, ForeignKey("subjects.id"), primary_key=True)
 )
 
-
 class User(Base):
     __tablename__ = 'users'
 
@@ -64,12 +64,14 @@ class Diagnostika(Base):
     users = relationship("User", secondary=user_diagnostika_association, back_populates="diagnostikas")
     created_at = Column(DateTime, default=toshkent_now)
     updated_at = Column(DateTime, default=toshkent_now, onupdate=toshkent_now)
+    finished_at = Column(DateTime, nullable=True)  # ✅ Tugash vaqti
+    status = Column(Boolean, default=True)  # ✅ Diagnostika holati (True - aktiv, False - tugagan)
     subjects = relationship(
         "Subject",
         secondary=diagnostika_subject_association,
         back_populates="diagnostikas"
     )
-    questions = relationship("Question", back_populates="diagnostika", cascade="all, delete-orphan")  # ✅ Qo‘shildi
+    questions = relationship("Question", back_populates="diagnostika", cascade="all, delete-orphan")
 
 
 class Subject(Base):
@@ -117,3 +119,30 @@ class History(Base):
     diagnostika_id = Column(BigInteger, ForeignKey("diagnostika.id"), nullable=False)
     created_at = Column(DateTime, default=toshkent_now)
     user = relationship("User", back_populates="history")
+
+class Result(Base):
+    __tablename__ = "results"
+
+    id = Column(BigInteger, primary_key=True, autoincrement=True)
+    diagnostika_id = Column(BigInteger, ForeignKey("diagnostika.id"), nullable=False)
+    user_id = Column(BigInteger, ForeignKey("users.id"), nullable=False)
+    subject1_name = Column(String, nullable=False)  # 1-fan nomi
+    subject2_name = Column(String, nullable=False)  # 2-fan nomi
+    correct_answers_subject1 = Column(Integer, nullable=False, default=0)  # 1-fan to‘g‘ri javoblar soni
+    correct_answers_subject2 = Column(Integer, nullable=False, default=0)  # 2-fan to‘g‘ri javoblar soni
+    correct_answers_mandatory = Column(Integer, nullable=False, default=0)  # Majburiy fan to‘g‘ri javoblar soni
+    total_score = Column(Integer, nullable=False, default=0)  # Jami ball
+    completed_at = Column(DateTime, default=toshkent_now)  # Yakunlangan vaqti
+
+    all_answer_ids = Column(JSONB, nullable=False, default=list)
+    correct_answer_ids = Column(JSONB, nullable=False, default=list)  # ✅ To‘g‘ri javoblar ID lari
+    wrong_answer_ids = Column(JSONB, nullable=False, default=list)  # ✅ Noto‘g‘ri javoblar ID lari
+
+    # ✅ Test davomiyligi (necha soniya sarflangan)
+    duration_time = Column(String, nullable=False, default="00:00:00") # ⏳ Testni qancha vaqt bajargan
+
+    user = relationship("User", back_populates="results")
+    diagnostika = relationship("Diagnostika", back_populates="results")
+
+    User.results = relationship("Result", back_populates="user", cascade="all, delete-orphan")
+    Diagnostika.results = relationship("Result", back_populates="diagnostika", cascade="all, delete-orphan")

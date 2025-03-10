@@ -19,7 +19,7 @@ async def show_main_subjects(call: types.CallbackQuery):
     text, keyboard = await get_subject_buttons()
     await call.message.edit_text(text, reply_markup=keyboard)
 
-@dp.callback_query_handler(lambda call: call.data == "admin_add_subject")
+@dp.callback_query_handler(lambda call: call.data == "admin_add_subject", state="*")
 async def ask_for_subject_name(call: types.CallbackQuery, state: FSMContext):
     await call.message.edit_text("📌 Iltimos, yangi fan nomini kiriting:", reply_markup=admin_back_menu)
     await state.set_state(AddSubjectState.waiting_for_subject_name)
@@ -141,7 +141,7 @@ async def show_tests_for_diagnostika(call: types.CallbackQuery):
     text, keyboard = await get_test_buttons(subject_id, diagnostika_id)
     await call.message.edit_text(text, reply_markup=keyboard)
 
-@dp.callback_query_handler(lambda call: call.data.startswith("admin_delete_tests:"))
+@dp.callback_query_handler(lambda call: call.data.startswith("admin_delete_tests:"), state="*")
 async def confirm_delete_tests(call: types.CallbackQuery):
     data_parts = call.data.split(":")
     subject_id = int(data_parts[1])

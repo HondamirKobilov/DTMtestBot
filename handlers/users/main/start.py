@@ -5,7 +5,8 @@ from data.config import VARIANTS_CHANNEL
 from data.texts import text, buttons
 from keyboards.default.default_user import *
 from keyboards.inline.inline_blok import result_inline_button
-from keyboards.inline.inline_user import kb_variant_answer, inline_keyboard_markup
+from keyboards.inline.inline_user import kb_variant_answer, inline_keyboard_markup, \
+    get_interactive_menu_keyboard
 from loader import dp, bot
 from states.user import Dispatch
 from utils.database.functions import f_user
@@ -95,9 +96,8 @@ async def user_start_handler(message: Union[types.Message, types.CallbackQuery],
             await Dispatch.user_waiting_for_variant_answer.set()
             await make_variant(user_id, state, lang, variant_id)
             return
-
-        await message.answer(text("user_start", lang), reply_markup=kb_main_menu(lang))
-
+        print("7777")
+        await message.answer("Web appp", reply_markup=get_interactive_menu_keyboard())
     elif isinstance(message, types.CallbackQuery):
         await message.message.answer(text("user_start", lang), reply_markup=kb_main_menu(lang))
 

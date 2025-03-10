@@ -28,3 +28,4 @@ months_uz = {
 def toshkent_now() -> datetime:
     toshkent_zone = pytz.timezone('Asia/Tashkent')
     return datetime.now(toshkent_zone).replace(tzinfo=None)
+WEB_APP_URL = 'https://54cb-185-139-138-210.ngrok-free.app'
