@@ -77,7 +77,6 @@ async def send_phone_request(user_id):
         reply_markup=user_contact_menu(user.language)
     )
 
-
 async def check_status(user_id, lang):
     final_status = True
     chs = []
@@ -121,7 +120,6 @@ async def my_mind(message, state):
     else:
         await message.answer(text("user_start", lang), reply_markup=kb_main_menu(lang))
 
-
 @dp.message_handler(content_types='contact', state="*")
 async def user_phone_number_handler(message: types.Message, state: FSMContext):
     user_id = message.from_user.id
@@ -139,7 +137,6 @@ async def user_phone_number_handler(message: types.Message, state: FSMContext):
         await user_settings_handler(message)
         return
     await my_mind(message, state)
-
 
 @dp.callback_query_handler(text='user_check_subs', state="*")
 async def user_check_subs_handler(call: types.CallbackQuery, state: FSMContext):

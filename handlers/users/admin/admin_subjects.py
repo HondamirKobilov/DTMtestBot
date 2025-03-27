@@ -1,7 +1,6 @@
 from aiogram import types
 from aiogram.dispatcher import FSMContext
 from typer.cli import state
-
 from keyboards.inline.inline_admin import get_subject_buttons, admin_back_menu, \
     get_subject_detail_buttons, admin_back_button, get_test_buttons, \
     get_diagnostika_list_buttons, get_confirm_delete_subject_buttons, get_delete_tests_confirmation_buttons, \
@@ -100,7 +99,7 @@ async def toggle_subject_compulsory(call: types.CallbackQuery):
     text, keyboard = await get_subject_detail_buttons(subject_id)
     await call.message.edit_text(text, reply_markup=keyboard)
 
-@dp.callback_query_handler(lambda call: call.data.startswith("toggle_subject_foreign:"))
+@dp.callback_query_handler(lambda call: call.data.startswith("toggle_subject_foreign:"), state="*")
 async def toggle_subject_foreign(call: types.CallbackQuery):
     subject_id = int(call.data.split(":")[1])
     subject = await get_subject_by_id(subject_id)

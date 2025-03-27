@@ -1,10 +1,8 @@
 from typing import Union
-
 from aiogram import types, Dispatcher
 from aiogram.dispatcher.handler import CancelHandler, current_handler
 from aiogram.dispatcher.middlewares import BaseMiddleware
 from aiogram.utils.exceptions import Throttled
-
 
 async def message_throttled(message: Union[types.Message, types.CallbackQuery, types.InlineQuery], throttled: Throttled):
     try:
@@ -17,7 +15,6 @@ async def message_throttled(message: Union[types.Message, types.CallbackQuery, t
             if isinstance(message, types.CallbackQuery):
                 await message.answer()
     except: pass
-
 
 class ThrottlingMiddleware(BaseMiddleware):
     def __init__(self, limit=0.8, key_prefix='antiflood_'):
