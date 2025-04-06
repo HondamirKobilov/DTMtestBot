@@ -154,7 +154,6 @@ async def handle_user_answers(message: types.Message, state: FSMContext):
         row = row.ljust(50)
         result_text += row.rstrip() + "\n"
 
-        # Har 30 savoldan keyin fan nomini qo‘shish
         if (i + 1) % 30 == 0:
             fan_index = (i // 30)
             if fan_index < len(fan_names):

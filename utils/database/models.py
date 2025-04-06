@@ -1,5 +1,5 @@
 from asyncpg import DuplicateDatabaseError, connect
-from sqlalchemy import Column, String, Boolean, DateTime, BigInteger, VARCHAR, Integer, Table
+from sqlalchemy import Column, String, Boolean, DateTime, BigInteger, VARCHAR, Integer, Table, UniqueConstraint
 from sqlalchemy import ForeignKey
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.ext.asyncio import create_async_engine
@@ -49,12 +49,20 @@ class User(Base):
     username = Column(String, unique=True, nullable=True)
     is_blocked = Column(Boolean, nullable=False, default=False)
     is_premium = Column(Boolean, nullable=False, default=False)
-    share_value = Column(String, nullable=True)
+    referral_count = Column(Integer, nullable=False, default=0)
     created_at = Column(DateTime, default=toshkent_now)
     updated_at = Column(DateTime, default=toshkent_now, onupdate=toshkent_now)
     diagnostikas = relationship("Diagnostika", secondary=user_diagnostika_association, back_populates="users")
     history = relationship("History", back_populates="user")
 
+class ReferralCount(Base):
+    __tablename__ = 'ref_count'
+
+    id = Column(BigInteger, primary_key=True, autoincrement=True)
+    count = Column(Integer, nullable=False, default=0)
+
+    def __repr__(self):
+        return f"<ReferralCount id={self.id} count={self.count}>"
 
 class Diagnostika(Base):
     __tablename__ = 'diagnostika'
@@ -133,12 +141,9 @@ class Result(Base):
     correct_answers_mandatory = Column(Integer, nullable=False, default=0)  # Majburiy fan to‘g‘ri javoblar soni
     total_score = Column(Integer, nullable=False, default=0)  # Jami ball
     completed_at = Column(DateTime, default=toshkent_now)  # Yakunlangan vaqti
-
     all_answer_ids = Column(JSONB, nullable=False, default=list)
     correct_answer_ids = Column(JSONB, nullable=False, default=list)  # ✅ To‘g‘ri javoblar ID lari
     wrong_answer_ids = Column(JSONB, nullable=False, default=list)  # ✅ Noto‘g‘ri javoblar ID lari
-
-    # ✅ Test davomiyligi (necha soniya sarflangan)
     duration_time = Column(String, nullable=False, default="00:00:00") # ⏳ Testni qancha vaqt bajargan
 
     user = relationship("User", back_populates="results")
@@ -146,3 +151,29 @@ class Result(Base):
 
     User.results = relationship("Result", back_populates="user", cascade="all, delete-orphan")
     Diagnostika.results = relationship("Result", back_populates="diagnostika", cascade="all, delete-orphan")
+
+class Group(Base):
+    __tablename__ = "groups"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    chat_id = Column(BigInteger, nullable=False, unique=True)
+    username = Column(String, nullable=False)
+    title = Column(String, nullable=False)
+
+    def __repr__(self):
+        return f"<Group(id={self.id}, chat_id={self.chat_id}, username='@{self.username}', title='{self.title}')>"
+
+class ReferralHistory(Base):
+    __tablename__ = "referral_history"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)         # Optional: aniqlik uchun
+    inviter_id = Column(BigInteger, nullable=False)                   # Taklif qilgan user
+    invited_id = Column(BigInteger, nullable=False)                   # Taklif qilingan user
+    diagnostika_id = Column(BigInteger, nullable=False)               # Qaysi diagnostika uchun taklif qilingan
+
+    __table_args__ = (
+        UniqueConstraint("inviter_id", "invited_id", "diagnostika_id", name="unique_referral_diagnostika"),
+    )
+
+    def __repr__(self):
+        return f"<ReferralHistory inviter={self.inviter_id}, invited={self.invited_id}, diagnostika={self.diagnostika_id}>"

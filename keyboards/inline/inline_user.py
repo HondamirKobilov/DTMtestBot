@@ -11,8 +11,6 @@ language_picker = IKM(
     ]
 )
 
-
-
 def kb_subject_subjects(subjects, lang):
     kb = IKM(
         row_width=2
@@ -31,8 +29,6 @@ def kb_subject_variants(variants, language):
         kb.insert(IKB(text=f"{variant.variant_id}-variant", callback_data=f"variant_id:{variant.variant_id}"))
     kb.add(IKB(text=button('user_back', language), callback_data="user_back_to_lang_subject"))
     return kb
-
-
 
 
 def kb_variant_answer(variant_id, lang):

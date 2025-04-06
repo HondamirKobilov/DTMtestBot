@@ -1,17 +1,19 @@
 from datetime import datetime, timedelta
+from typing import Optional
+
 from sqlalchemy import select, func
 from sqlalchemy.ext.asyncio import AsyncSession
 from utils.database.models import engine, User
 
 
-async def create_user(user_id, username, is_premium=False, share_value=None):
+async def create_user(user_id, username, is_premium=False, referral_count=None):
     async with AsyncSession(engine) as session:
         try:
             new_user = User(
                 user_id=user_id,
                 username=username,
                 is_premium=is_premium,
-                share_value=share_value
+                referral_count=referral_count
             )
             session.add(new_user)
             await session.commit()
@@ -102,3 +104,14 @@ async def get_premium_users_count():
             select(func.count(User.id)).where(User.is_premium == True)
         )
         return result.scalar()
+async def increment_user_referral_count(user_id: int):
+    async with AsyncSession(engine) as session:
+        result = await session.execute(select(User).where(User.user_id == user_id))
+        user = result.scalar_one_or_none()
+
+        if user:
+            user.referral_count += 1
+            updated_count = user.referral_count
+            await session.commit()
+            return updated_count
+        return None

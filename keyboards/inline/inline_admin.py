@@ -22,7 +22,9 @@ admin_main_menu = IKM(
         inline_admin_keyboards("admin_statistics"),
         inline_admin_keyboards("admin_manage_channels"),
         inline_admin_keyboards("admin_subjects"),
-        inline_admin_keyboards("admin_diaginostika")
+        inline_admin_keyboards("admin_diaginostika"),
+        inline_admin_keyboards("admin_ref"),
+        inline_admin_keyboards("admin_group")
     ]
 )
 
@@ -251,4 +253,34 @@ async def generate_diagnostika_buttons(diagnostika_id: int) -> IKM:
         IKB(text="🗑 O‘chirish", callback_data=f"confirm_delete_diagnostika:{diagnostika_id}")
     )
     keyboard.add(IKB(text="🔙 Ortga", callback_data="admin_diaginostika"))
+    return keyboard
+
+
+def referral_action_buttons() -> IKM:
+    keyboard = IKM(row_width=2)
+    keyboard.add(
+        IKB(text="➕ Referal qo‘shish", callback_data="admin_add_referral"),
+        IKB(text="🔙 Ortga", callback_data="admin_back")
+    )
+    return keyboard
+
+def referral_update_buttons() -> IKM:
+    keyboard = IKM(row_width=2)
+    keyboard.add(
+        IKB("✏️ Referal sonini o‘zgartirish", callback_data="admin_change_referral"),
+        IKB("🔙 Ortga", callback_data="admin_back")
+    )
+    return keyboard
+
+def group_empty_buttons():
+    keyboard = IKM(row_width=1)
+    keyboard.add(
+        IKB("➕ Guruh qo‘shish", callback_data="admin_add_group"),
+        IKB("🔙 Ortga", callback_data="admin_back")
+    )
+    return keyboard
+
+def group_exists_buttons():
+    keyboard = IKM(row_width=1)
+    keyboard.add(IKB("🔙 Ortga", callback_data="admin_back"))
     return keyboard

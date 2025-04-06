@@ -71,6 +71,8 @@ _const_buttons = {
     "admin_manage_channels": "⚙️ Kanallar boshqaruvi",
     "admin_add_channel": "🆕 Yangi kanal qo'shish",
     "admin_add_subject": "🆕 Yangi fan qo'shish",
+    "admin_ref": "🔗 Referal",
+    "admin_group": "👥 Group",
     "admin_home": "🏠 Bosh menyu",
     "admin_back": "🔙 Ortga",
     "admin_delete": "❌ O'chirish",

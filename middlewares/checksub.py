@@ -10,7 +10,6 @@ from loader import bot
 from middlewares.misc import check_status
 from utils.database.functions import f_user
 
-
 class BigBrother(BaseMiddleware):
     async def on_pre_process_update(self, update: types.Update, data: dict):
         user_id = update.message.from_user.id if update.message else update.callback_query.from_user.id if update.callback_query else False
@@ -50,11 +49,10 @@ class BigBrother(BaseMiddleware):
             region = user_data.region
             district = user_data.district
             phone = user_data.phone
-            share_value = user_data.share_value
-            if share_value is None:
-                await f_user.update_user(user_id, share_value=share_value)
+            referral_count = user_data.referral_count
+            if referral_count is None:
+                await f_user.update_user(user_id, referral_count=referral_count)
 
-            # print(user_data.__dict__)
             lang = await f_user.select_user_language(user_id)
             if lang is None:
                 await update.message.answer(const_text("user_register_language"), reply_markup=language_picker)

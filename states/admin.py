@@ -37,3 +37,12 @@ class AddDiagnostikaState(StatesGroup):
 class EditDiagnostikaState(StatesGroup):
     name = State()
     waiting_for_finished_at = State()
+
+class ReferralStates(StatesGroup):
+    waiting_for_new_count = State()
+    waiting_for_edit_count = State()
+
+class AdminGroupState(StatesGroup):
+    chat_id = State()
+    username = State()
+    title = State()

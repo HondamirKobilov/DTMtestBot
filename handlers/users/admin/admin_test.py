@@ -99,11 +99,9 @@ async def handle_docx(message: types.Message, state: FSMContext):
     if not document.file_name.endswith(".docx"):
         await message.answer("❌ Faqat DOCX formatdagi fayl yuklang!")
         return
-
     os.makedirs("downloads", exist_ok=True)
     file_path = f"downloads/{document.file_name}"
     await document.download(destination_file=file_path)
-
     subject_data = await state.get_data()
     subject_id = subject_data.get("subject_id")
     diagnostika_id = subject_data.get("diagnostika_id")

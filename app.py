@@ -1,6 +1,8 @@
 import asyncio
 import pandas as pd
 from aiogram.utils import executor
+from aiogram import types
+
 import filters
 import handlers
 import middlewares
@@ -38,4 +40,4 @@ async def on_startup(dispatcher):
 if __name__ == '__main__':
     loop = asyncio.get_event_loop()
     loop.create_task(check_diagnostika_status())  # ✅ Background taskni ishga tushiramiz
-    executor.start_polling(dp, on_startup=on_startup, skip_updates=True)
+    executor.start_polling(dp, on_startup=on_startup, skip_updates=True, allowed_updates=types.AllowedUpdates.all())

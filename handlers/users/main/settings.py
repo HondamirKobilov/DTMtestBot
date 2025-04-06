@@ -115,8 +115,8 @@ async def my_mind(message, state):
         )
         return
 
-    if user.share_value is not None:
-        await f_user.update_user(user_id, share_value=None)
+    if user.referral_count is not None:
+        await f_user.update_user(user_id, referral_count=0)
     else:
         await message.answer(text("user_start", lang), reply_markup=kb_main_menu(lang))
 

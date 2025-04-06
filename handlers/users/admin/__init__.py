@@ -5,3 +5,7 @@ from . import admin_users
 from . import admin_subjects
 from . import admin_test
 from . import admin_diaginostika
+from . import admin_ref
+from . import admin_group
+
+
